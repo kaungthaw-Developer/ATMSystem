@@ -1,0 +1,30 @@
+﻿<div class="signin-image">
+    <figure>
+        <img src="~/images/signin-image.jpg" alt="sing up image">
+    </figure>
+  
+</div>
+<div class="signin-form">
+    <h2 class="form-title">Sign up</h2>
+        <input type="text" id="userId" readonly hidden></input>
+        <div class="form-group form-button">
+            <input type="button" id="history"
+                   class="form-submit" value="Sign In" />
+        </div>
+    <div class="form-group form-button">
+        <input type="button" id="cashOut"
+               class="form-submit" value="Sign In" />
+    </div>
+
+</div>
+@section Scripts{
+    <script>
+        $.('#history').click(function () {
+            $.ajax({
+                url:'histroy',
+                type:'get',
+
+            })
+        })
+    </script>
+}
